@@ -5,6 +5,7 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "readers")
 public class Reader {
 
     @Id
@@ -12,18 +13,23 @@ public class Reader {
     private Long id;
 
     @NotNull
+    @Column(name = "lastName")
     private String lastName;
 
     @NotNull
+    @Column(name = "firstName")
     private String firstName;
 
     @NotNull
+    @Column(name = "birthDate")
     private LocalDate birthDate;
 
     @NotNull
+    @Column(name = "address")
     private String address;
 
     @NotNull
+    @Column(name = "gender")
     private String gender;
 
     public Reader() {
