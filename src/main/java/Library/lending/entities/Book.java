@@ -33,6 +33,9 @@ public class Book {
     private int edition;
 
     // Getters and setters
+    public Book(){
+
+    }
 
 
     public Book(String isbn, String title, String author, String publisher, int edition) {
