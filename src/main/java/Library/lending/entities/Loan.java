@@ -59,11 +59,11 @@ public class Loan {
         this.book = book;
     }
 
-    public Reader getreader() {
+    public Reader getReader() {
         return reader;
     }
 
-    public void setreader(Reader reader) {
+    public void setReader(Reader reader) {
         this.reader = reader;
     }
 
@@ -87,6 +87,7 @@ public class Loan {
         return returnDate;
     }
 
+
     public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
     }
@@ -104,4 +105,6 @@ public class Loan {
                 ", returnDate=" + returnDate +
                 '}';
     }
+
+
 }

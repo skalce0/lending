@@ -9,12 +9,9 @@ import javax.persistence.*;
 public class Book {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @NotNull
     @Column(name = "isbn", unique = true)
-    private String isbn;
+    private Long isbn;
 
     @NotNull
     @Column(name = "title")
@@ -38,7 +35,7 @@ public class Book {
     }
 
 
-    public Book(String isbn, String title, String author, String publisher, int edition) {
+    public Book(Long isbn, String title, String author, String publisher, int edition) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;
@@ -48,11 +45,11 @@ public class Book {
 
 
     // getters and setters
-    public String getIsbn() {
+    public Long getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
+    public void setIsbn(Long isbn) {
         this.isbn = isbn;
     }
 
@@ -87,5 +84,8 @@ public class Book {
     public void setEdition(int edition) {
         this.edition = edition;
     }
+
+
 }
+
 
