@@ -34,11 +34,12 @@ public class Loan {
     public Loan() {
     }
 
-    public Loan(Book book, Reader reader, LocalDate loanDate, LocalDate dueDate) {
+    public Loan(Book book, Reader reader, LocalDate loanDate, LocalDate dueDate, LocalDate returnDate) {
         this.book = book;
         this.reader = reader;
         this.loanDate = loanDate;
         this.dueDate = dueDate;
+        this.returnDate = returnDate;
     }
 
     // getters and setters
@@ -59,11 +60,11 @@ public class Loan {
         this.book = book;
     }
 
-    public Reader getreader() {
+    public Reader getReader() {
         return reader;
     }
 
-    public void setreader(Reader reader) {
+    public void setReader(Reader reader) {
         this.reader = reader;
     }
 
@@ -87,6 +88,7 @@ public class Loan {
         return returnDate;
     }
 
+
     public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
     }
@@ -104,4 +106,6 @@ public class Loan {
                 ", returnDate=" + returnDate +
                 '}';
     }
+
+
 }
