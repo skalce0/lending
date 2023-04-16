@@ -2,6 +2,7 @@ package Library.lending.services;
 
 
 
+import Library.lending.entities.Dto.ReaderDto;
 import Library.lending.entities.Reader;
 import Library.lending.repositories.ReaderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +25,11 @@ public class ReaderService {
         return readerRepository.findById(id);
     }
 
-    public Reader createReader(Reader reader) {
+    /*public Reader createReader(ReaderDto reader) {
         return readerRepository.save(reader);
-    }
+    }*/
 
-    public Reader updateReader(Long id, Reader reader) {
+    public Reader updateReader(Long id, ReaderDto reader) {
         Optional<Reader> existingReader = readerRepository.findById(id);
 
         if (existingReader.isPresent()) {
